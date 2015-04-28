@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<admins xmlns="file:/Users/renchen/Documents/workspace/wineClub/admins.xml">
+<admin id="1">
+<name>Alice Admin</name>
+<create_date>2015-04</create_date>
+<create_by>0</create_by>
+</admin>
+</admins>

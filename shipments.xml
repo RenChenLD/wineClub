@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<shipments xmlns="file:/Users/renchen/Documents/workspace/wineClub/shipments.xml">
+<shipment id="0">
+<selection_month>2015-04</selection_month>
+<status>Cancelled</status>
+<date>Mon Apr 27 13:52:08 CDT 2015</date>
+<type>RW</type>
+<wines>
+<wine id="2">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="3">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="4">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="5">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="6">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="7">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<notes>
+
+<note id="9">
+<content>I love this wine.</content>
+<date>2015-04</date>
+</note>
+</notes>
+</shipment>
+</shipments>
