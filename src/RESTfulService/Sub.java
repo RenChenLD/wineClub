@@ -34,12 +34,16 @@ public class Sub {
 	private static final Logger logger = Logger.getLogger(Sub.class);
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response addSub(JSONObject data)
+	public Response addSub(InputStream data)
 	{
 		StringBuilder crunchifyBuilder = new StringBuilder();
         try {
         	 List<String> slist = new ArrayList<String>();
-           
+        	 String line = null;
+        	 BufferedReader in = new BufferedReader(new InputStreamReader(data));
+             while ((line = in.readLine()) != null) {
+                 slist.add(parseIncomingData(line));
+             }
             Address addr = new Address(slist.get(3),slist.get(4),slist.get(5),slist.get(6));
             Subscriber s = new Subscriber(slist.get(0),slist.get(1),slist.get(2), addr);
             s.setDefaultMS();
@@ -57,8 +61,9 @@ public class Sub {
 	}
 	private String parseIncomingData(String line)
 	{
-		line.replaceAll("=", ": ");
-		line.replaceAll("+", " ");
+		if(line.contains("="))
+			{line.replaceAll("=", ": ");
+		line.replaceAll("+", " ");}
 		int i;
 		i = line.indexOf(" ");
 		String s0 = line.substring(i+1, line.length());

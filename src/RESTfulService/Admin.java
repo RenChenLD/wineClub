@@ -23,10 +23,11 @@ public class Admin {
 	private String name, create_date;
 	private int aid, pid;
 	private MonthlySelection ms;
-	private static File f = new File("/Users/renchen/Documents/workspace/wineClub/admins.xml");
+	private static File f = new File("/home/admins.xml");
 	public Admin(String name)
 	{
 		this.name = name;
+		this.create_date = YearMonth.now().toString();
 		this.aid = IdGenerator.newID();
 	}
 	
@@ -181,12 +182,15 @@ public class Admin {
 						doc = builder.newDocument();
 						mainRootElement = doc.createElementNS(f.toURI().toString(), "admins");
 						doc.appendChild(mainRootElement);
+						mainRootElement.appendChild(getAdmin(doc, a.getId(), a.getName(), a.getCreate_date(), a.getPid()));
+
 					}else
 					{
 						doc = builder.parse(f);
 						mainRootElement = doc.getElementsByTagName("admins").item(0);
+						mainRootElement.appendChild(getAdmin(doc, a.getId(), a.getName(), a.getCreate_date(), a.getPid()));
+
 					}
-					mainRootElement.appendChild(getAdmin(doc, a.getId(), a.getName(), a.getCreate_date(), a.getPid()));
 					
 					Transformer transformer = TransformerFactory.newInstance().newTransformer();
 			        transformer.setOutputProperty(OutputKeys.INDENT, "yes"); 

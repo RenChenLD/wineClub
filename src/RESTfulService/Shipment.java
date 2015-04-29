@@ -27,7 +27,7 @@ public class Shipment {
 	private MonthlySelection ms;
 	private Wine[] ws;
 	private Address add;
-	private static File f = new File("/Users/renchen/Documents/workspace/wineClub/shipments.xml");
+	private static File f = new File("/home/shipments.xml");
 	public Shipment(int id)
 	{
 		this.id = id;
@@ -107,9 +107,11 @@ public class Shipment {
 			break;
 		case AR:
 			this.ms = new AR();
+			this.ws = this.ms.Wines();
 			break;
 		case AW:
 			this.ms = new AW();
+			this.ws = this.ms.Wines();
 			break;
 		}
 	}
@@ -256,7 +258,7 @@ public class Shipment {
 	        		if(ele.getAttribute("id").equals(Integer.toString(id)))
 	        			{
 	        				
-	        				if((doc.getElementsByTagName("notes") == null))
+	        				if(doc.getElementsByTagName("notes") == null)
 	        				{
 	        					Element shipments = doc.createElement("notes");
 	        					Element e = doc.createElement("note");

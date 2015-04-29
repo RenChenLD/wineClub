@@ -9,8 +9,11 @@ public class AR extends MonthlySelection {
 	@Override
 	public void addWine(Wine w)
 	{
-		for(int i = this.getWines().size(); i<6; this.getWines().size() )
-			this.insertWine(w);
+		for(int i = this.getWines().size(); i<6; i=this.getWines().size() )
+			if(w.getWineType().equals(WineType.RED))
+				this.insertWine(w);
+			else
+				System.out.println("This is not red wine.");
 	}
 	@Override
 	public Wine[] Wines()

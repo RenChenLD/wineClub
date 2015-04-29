@@ -30,7 +30,7 @@ public class Subscriber {
 	private static List<Note> ns = new ArrayList<Note>();
 	private static List<Shipment> shs = new ArrayList<Shipment>();
 	private Shipment sht;
-	private static File f = new File("/Users/renchen/Documents/workspace/wineClub/subscribers.xml");
+	private static File f = new File("/home/subscribers.xml");
 	public Subscriber()
 	{
 		
@@ -131,7 +131,7 @@ public class Subscriber {
 	
 	public void saveSubInfo()
 	{
-		MonthlySelection.saveMonthlySelection(ms, ws);
+//		MonthlySelection.saveMonthlySelection(ms, ws);
 		try{
 				DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder builder = builderFactory.newDocumentBuilder();
@@ -336,7 +336,9 @@ public class Subscriber {
 						s.setId(Integer.parseInt(ele.getAttribute("id").toString()));
 						a.setEmail(ele.getElementsByTagName("email").item(0).getTextContent());
 						a.setName(ele.getElementsByTagName("name").item(0).getTextContent());
+						if(ele.getElementsByTagName("twitter")!=null)
 						a.setTwitter(ele.getElementsByTagName("twitter").item(0).getTextContent());
+						if(ele.getElementsByTagName("facebook")!=null)
 						a.setFacebook(ele.getElementsByTagName("facebook").item(0).getTextContent());
 						a.setPhone(ele.getElementsByTagName("phone").item(0).getTextContent());
 						ad = new Address(ele.getElementsByTagName("street").item(0).getTextContent(), ele.getElementsByTagName("city").item(0).getTextContent(), ele.getElementsByTagName("state").item(0).getTextContent(), ele.getElementsByTagName("zip").item(0).getTextContent());
@@ -414,26 +416,26 @@ public class Subscriber {
 			e.printStackTrace();
 		}
 	}
-	private boolean isMatchName(String s)
-	{
-		String regex = "(?i).*" + s + ".*";
-    	return this.ac.Name().matches(regex);
-	}
-	private boolean isMatchEmail(String s)
-	{
-		String regex = "(?i).*" + s + ".*";
-		return this.ac.Email().matches(regex);
-	}
-	private boolean isMatchPhone(String s) {
-    	String s2 = s.replaceAll("[\\s\\-()]", ""); // drop all non-digit characters from search string
-    	String regex = "(?i).*" + s2 + ".*";
-    	return this.ac.Phone().matches(regex);
-    }
-    public boolean isMatch(String kw) {
-    	if (isMatchName(kw) || isMatchEmail(kw) || isMatchPhone(kw)) {
-    		return true;
-    	} else return false;
-    }
+//	private boolean isMatchName(String s)
+//	{
+//		String regex = "(?i).*" + s + ".*";
+//    	return this.ac.Name().matches(regex);
+//	}
+//	private boolean isMatchEmail(String s)
+//	{
+//		String regex = "(?i).*" + s + ".*";
+//		return this.ac.Email().matches(regex);
+//	}
+//	private boolean isMatchPhone(String s) {
+//    	String s2 = s.replaceAll("[\\s\\-()]", ""); // drop all non-digit characters from search string
+//    	String regex = "(?i).*" + s2 + ".*";
+//    	return this.ac.Phone().matches(regex);
+//    }
+//    public boolean isMatch(String kw) {
+//    	if (isMatchName(kw) || isMatchEmail(kw) || isMatchPhone(kw)) {
+//    		return true;
+//    	} else return false;
+//    }
     
     
 }

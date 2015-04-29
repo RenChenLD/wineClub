@@ -28,10 +28,9 @@ public class Wine {
 	private Year year;		// Vintage year
 	private static int numberOfRatings=0;
 	private static float rating = 0;
-	private float price;
 	private int ID;
 	private static List<Note> n;
-	private static File file = new File("/Users/renchen/Documents/workspace/wineClub/wineList.xml");
+	private static File file = new File("/home/wineList.xml");
 	
 	Wine(int id)
 	{
@@ -47,7 +46,6 @@ public class Wine {
 		this.country = "Italy";
 		this.maker = "Emila";
 		this.year = Year.parse("2010");
-		this.price = 10.0f;
 		this.ID = IdGenerator.newID();
 	}
 	Wine(MonthlySelectionType mst)
@@ -62,7 +60,6 @@ public class Wine {
 			this.country = "Italy";
 			this.maker = "Emila";
 			this.year = Year.parse("2010");
-			this.price = 10.0f;
 			this.ID = IdGenerator.newID();
 			break;
 		case AW:
@@ -74,7 +71,6 @@ public class Wine {
 			this.country = "Italy";
 			this.maker = "Emila";
 			this.year = Year.parse("2010");
-			this.price = 10.0f;
 			this.ID = IdGenerator.newID();
 			break;
 		case RW:
@@ -86,12 +82,11 @@ public class Wine {
 			this.country = "Italy";
 			this.maker = "Emila";
 			this.year = Year.parse("2010");
-			this.price = 10.0f;
 			this.ID = IdGenerator.newID();
 			break;
 		}
 	}
-	Wine(WineType t, WineVariety v, String ln, String g, String r, String c, String m, Year y, float price)
+	Wine(WineType t, WineVariety v, String ln, String g, String r, String c, String m, Year y)
 	{
 		this.wv = v;
 		this.wt = t;
@@ -101,7 +96,6 @@ public class Wine {
 		this.country = c;
 		this.maker = m;
 		this.year = y;
-		this.price = price;
 		this.ID = IdGenerator.newID();
 	}
 	
@@ -192,14 +186,6 @@ public class Wine {
 			e.printStackTrace();
 		}
 	}
-	public float getPrice()
-	{
-		return this.price;
-	}
-	public void setPrice(String s)
-	{
-		this.price = Float.parseFloat(s);
-	}
 	public int getNumberOfRatings() {
 		return this.numberOfRatings;
 	}
@@ -227,50 +213,50 @@ public class Wine {
 		numberOfRatings = numberOfRatings + 1;
 		rating = rating*((float)(numberOfRatings - 1)/numberOfRatings) + (float)r/numberOfRatings;
 	}
-	public boolean isMatch(String kw) {
-        if (isMatchVariety(kw) || isMatchType(kw) || isMatchLabel(kw) || isMatchGrape(kw) || isMatchRegion(kw) || isMatchCountry(kw) || isMatchMaker(kw) || isMatchYear(kw)) {
-                return true;
-        } else return false;
-	}
+//	public boolean isMatch(String kw) {
+//        if (isMatchVariety(kw) || isMatchType(kw) || isMatchLabel(kw) || isMatchGrape(kw) || isMatchRegion(kw) || isMatchCountry(kw) || isMatchMaker(kw) || isMatchYear(kw)) {
+//                return true;
+//        } else return false;
+//	}
 	    
-    private boolean isMatchVariety(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.wv.name().matches(regex);
-    }
-
-    private boolean isMatchType(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.wt.name().matches(regex);
-    }
-    
-    private boolean isMatchLabel(String kw) {
-        String regex = "(?i).*" + kw + ".*";
-        return this.labelName.matches(regex);
-    }
-    
-    private boolean isMatchGrape(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.grape.matches(regex);
-    }
-    
-    private boolean isMatchRegion(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.region.matches(regex);    }
-
-    private boolean isMatchCountry(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.country.matches(regex);
-    }
-
-    private boolean isMatchMaker(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.maker.matches(regex);
-    }
-
-    private boolean isMatchYear(String kw) {
-    	String regex = "(?i).*" + kw + ".*";
-        return this.year.toString().matches(regex);
-    }
+//    private boolean isMatchVariety(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.wv.name().matches(regex);
+//    }
+//
+//    private boolean isMatchType(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.wt.name().matches(regex);
+//    }
+//    
+//    private boolean isMatchLabel(String kw) {
+//        String regex = "(?i).*" + kw + ".*";
+//        return this.labelName.matches(regex);
+//    }
+//    
+//    private boolean isMatchGrape(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.grape.matches(regex);
+//    }
+//    
+//    private boolean isMatchRegion(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.region.matches(regex);    }
+//
+//    private boolean isMatchCountry(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.country.matches(regex);
+//    }
+//
+//    private boolean isMatchMaker(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.maker.matches(regex);
+//    }
+//
+//    private boolean isMatchYear(String kw) {
+//    	String regex = "(?i).*" + kw + ".*";
+//        return this.year.toString().matches(regex);
+//    }
     
     public static Wine getWineDetail(int wid)
     {
@@ -399,7 +385,7 @@ public class Wine {
 	        	{
 	        		if(ele.getAttribute("id").equals(Integer.toString(this.ID)))
     				{
-	        			if(doc.getElementsByTagName("notes") == null)
+	        			if(ele.getElementsByTagName("notes") == null)
         				{
         					Element shipments = doc.createElement("notes");
         					Element e = doc.createElement("note");
@@ -428,36 +414,36 @@ public class Wine {
     		e.printStackTrace();
     	}
     }
-    public void saveWineNote(Note n)
-    {
-    	try{
-    		DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-    		DocumentBuilder builder = builderFactory.newDocumentBuilder();
-    		Document doc = builder.parse(file);
-    		doc.getDocumentElement().normalize();
-	        NodeList nList = doc.getElementsByTagName("notes");
-	        for(int i = 0; i<nList.getLength(); i++)
-	        {
-	        	Node node = nList.item(i);
-	        	Element ele = (Element) node;
-	        	if(node.getNodeType() == Element.ELEMENT_NODE)
-	        	{
-	        		if(ele.getAttribute("id").equals(Integer.toString(this.ID)))
-    				{
-	        			Element newNote = doc.createElement("note");
-	        			newNote.setAttribute("id", Integer.toString(n.getId()));
-	        			newNote.appendChild(getWineElements(doc, newNote, "content", n.getContent()));
-	        			newNote.appendChild(getWineElements(doc, newNote, "date", n.getDate()));
-	        			ele.appendChild(newNote);
-    				}
-	        	}
-	        }
-	        saveToFile(doc);
-    	}catch(Exception e)
-    	{
-    		e.printStackTrace();
-    	}
-    }
+//    public void saveWineNote(Note n)
+//    {
+//    	try{
+//    		DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+//    		DocumentBuilder builder = builderFactory.newDocumentBuilder();
+//    		Document doc = builder.parse(file);
+//    		doc.getDocumentElement().normalize();
+//	        NodeList nList = doc.getElementsByTagName("notes");
+//	        for(int i = 0; i<nList.getLength(); i++)
+//	        {
+//	        	Node node = nList.item(i);
+//	        	Element ele = (Element) node;
+//	        	if(node.getNodeType() == Element.ELEMENT_NODE)
+//	        	{
+//	        		if(ele.getAttribute("id").equals(Integer.toString(this.ID)))
+//    				{
+//	        			Element newNote = doc.createElement("note");
+//	        			newNote.setAttribute("id", Integer.toString(n.getId()));
+//	        			newNote.appendChild(getWineElements(doc, newNote, "content", n.getContent()));
+//	        			newNote.appendChild(getWineElements(doc, newNote, "date", n.getDate()));
+//	        			ele.appendChild(newNote);
+//    				}
+//	        	}
+//	        }
+//	        saveToFile(doc);
+//    	}catch(Exception e)
+//    	{
+//    		e.printStackTrace();
+//    	}
+//    }
     public Note getNote(int nid)
     {
     	Note n = new Note(nid);

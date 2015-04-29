@@ -24,27 +24,19 @@ public abstract class MonthlySelection {
 	private List<Wine> ws = new ArrayList<Wine> ();
 	private float price;
 	private int id;
-	private static File f = new File("/Users/renchen/Documents/workspace/wineClub/monthlySelections.xml");
+	private static File f = new File("/home/monthlySelections.xml");
 	abstract void addWine(Wine w);
 	abstract Wine[] Wines() ;
 	
-	public boolean isMatch(String kw) {
-		Iterator<Wine> it = this.ws.iterator();
-		while (it.hasNext()) {
-			Wine w = it.next();
-			if (w.isMatch(kw)) return true;
-		}
-		return false;
-	}
+//	public boolean isMatch(String kw) {
+//		Iterator<Wine> it = this.ws.iterator();
+//		while (it.hasNext()) {
+//			Wine w = it.next();
+//			if (w.isMatch(kw)) return true;
+//		}
+//		return false;
+//	}
 	
-	public void setPrice(float p)
-	{
-		this.price = p;
-	}
-	public float getPrice()
-	{
-		return this.price;
-	}
 	public String getSelectMonth()
 	{
 		return this.ym.toString();

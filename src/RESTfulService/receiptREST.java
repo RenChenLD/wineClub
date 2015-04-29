@@ -1,5 +1,10 @@
 package RESTfulService;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -24,12 +29,26 @@ import com.google.gson.Gson;
 public class receiptREST {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response addReceipt(JSONObject jo)
+	public Response addReceipt(InputStream jo) throws IOException
 	{
-		Receipt r = new Receipt(jo.getString("name"));
-		return Response.status(201).entity(r.getId()).build();
+		BufferedReader in = new BufferedReader(new InputStreamReader(jo));
+		String line = in.readLine();
+		Receipt r = new Receipt(parseIncomingData(line));
+		Gson gson = new Gson();
+		String json = gson.toJson(r.getId());
+		Receipt.saveReceipt(r);
+		return Response.status(201).entity(json).build();
 	}
-	
+	private String parseIncomingData(String line)
+	{
+		if(line.contains("=")){
+		line.replaceAll("=", ": ");
+		line.replaceAll("+", " ");}
+		int i;
+		i = line.indexOf(" ");
+		String s0 = line.substring(i+1, line.length());
+		return s0;	
+	}
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllReceipt()
@@ -44,7 +63,7 @@ public class receiptREST {
 	
 	@GET
 	@Path("/{rid}")
-	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response getReceipt(@PathParam("rid") int rid)
 	{
 		Gson gson = new Gson();

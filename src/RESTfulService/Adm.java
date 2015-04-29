@@ -31,7 +31,7 @@ import com.google.gson.Gson;
 public class Adm {
 	private String parseIncomingData(String line)
 	{
-		if(line.contains("+"))
+		if(line.contains("="))
 		{
 			line.replaceAll("=", ": ");
 			line.replaceAll("+", " ");
@@ -84,10 +84,10 @@ public class Adm {
 	
 	@PUT
 	@Path("/{aid}")
-	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response updateAdmin(@PathParam("aid") int aid, @QueryParam("name") String name)
 	{
+		System.out.println(name);
 		try{
 			Admin.updateAdmin(aid, name);
 		}catch(Exception e)

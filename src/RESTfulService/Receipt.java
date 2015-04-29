@@ -4,6 +4,7 @@ import java.io.File;
 import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,9 +24,9 @@ import org.w3c.dom.NodeList;
 
 public class Receipt {
 	private String name;
-	private Date date;
+	private YearMonth date;
 	private int SubID, rid;
-	private static File f = new File("Receipts.xml");
+	private static File f = new File("/home/Receipts.xml");
 	public Receipt()
 	{
 		
@@ -33,7 +34,7 @@ public class Receipt {
 	public Receipt(String name)
 	{
 		this.name = name;
-		this.date = new Date();
+		this.date = YearMonth.now();
 		this.rid = IdGenerator.newID();
 		this.SubID = getSubscriberID(name);
 	}
@@ -59,8 +60,8 @@ public class Receipt {
 	}
 	public void setDate(String d) throws ParseException
 	{
-		Format f = new SimpleDateFormat("yyyymmdd");
-		this.date = (Date) f.parseObject(d);
+		
+		this.date = YearMonth.parse(d); 
 	}
 	public int getSubID()
 	{
@@ -119,7 +120,7 @@ public class Receipt {
 	}
 	public static void saveReceipt(Receipt r)
 	{
-		if(getReceipt(r.getId()) == null)
+		
 			try{
 					DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
 					DocumentBuilder builder = builderFactory.newDocumentBuilder();
