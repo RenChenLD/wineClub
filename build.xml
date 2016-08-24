@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="wineClub">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Applications/eclipse/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Apache Tomcat v8.0 [Apache Tomcat v8.0].libraryclasspath">
+        <pathelement location="../apache-tomcat-8.0.21/lib/annotations-api.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/catalina-ant.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/catalina-ha.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/catalina-storeconfig.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/catalina-tribes.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/catalina.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/ecj-4.4.2.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/el-api.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/jasper-el.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/jasper.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/jsp-api.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/servlet-api.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-api.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-coyote.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-jni.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-spdy.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-util-scan.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-util.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/tomcat-websocket.jar"/>
+        <pathelement location="../apache-tomcat-8.0.21/lib/websocket-api.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/asm-3.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/gson-2.3.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jersey-core-1.0.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jersey-server-1.0.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/json-lib-2.4-jdk15.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jsr311-api-1.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-1.2.13.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xstream-1.3.1.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="wineClub.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Apache Tomcat v8.0 [Apache Tomcat v8.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="WebContent/WEB-INF/lib/json-lib-2.4-jdk15.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="wineClub.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="GeneralTest (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="GeneralTest" todir="${junit.output.dir}"/>
+            <classpath refid="wineClub.classpath"/>
+        </junit>
+    </target>
+    <target name="GeneralTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="RESTfulService.GeneralTest" todir="${junit.output.dir}"/>
+            <classpath refid="wineClub.classpath"/>
+        </junit>
+    </target>
+    <target name="subscriberTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="RESTfulService.SubscriberTest" todir="${junit.output.dir}"/>
+            <classpath refid="wineClub.classpath"/>
+        </junit>
+    </target>
+    <target name="SubscriberTest.testAddSubscriberShipment">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="RESTfulService.SubscriberTest" todir="${junit.output.dir}"/>
+            <classpath refid="wineClub.classpath"/>
+        </junit>
+    </target>
+    <target name="test">
+        <java classname="RESTfulService.test" failonerror="true" fork="yes">
+            <classpath refid="wineClub.classpath"/>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>

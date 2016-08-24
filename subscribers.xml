@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subscribers xmlns="file:/Users/renchen/Documents/workspace/wineClub/subscribers.xml">
+<subscriber id="0">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+<shipments>
+<shipment id="9">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+</subscriber>
+<subscriber id="0">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+</subscriber>
+<subscriber id="242">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+</subscriber>
+<subscriber id="242">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+</subscriber>
+<subscriber id="242">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+</subscriber>
+<subscriber id="242">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+<shipments>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+</shipment>
+</shipments>
+</subscriber>
+<subscriber id="242">
+<email>itche@gmail.com</email>
+<name>itche</name>
+<phone>3128764950</phone>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+<twitter> </twitter>
+<facebook> </facebook>
+</subscriber>
+</subscribers>

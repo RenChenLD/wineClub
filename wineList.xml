@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wines xmlns="file:/Users/renchen/Documents/workspace/wineClub/wineList.xml">
+<wine id="110">
+<LabelName>Joseph Phelps Cabernet Sauvignon 2012</LabelName>
+<Grape>Cabernet Sauvignon</Grape>
+<Region>Napa</Region>
+<Country>USA</Country>
+<Maker>Joseph Phelps</Maker>
+<Year>2012</Year>
+<NumberOfRatings>21</NumberOfRatings>
+<Ratings>4.047619</Ratings>
+<WineType>WHITE</WineType>
+<WineVariety>SWEET</WineVariety>
+</wine>
+<wine id="110">
+<LabelName>Joseph Phelps Cabernet Sauvignon 2012</LabelName>
+<Grape>Cabernet Sauvignon</Grape>
+<Region>Napa</Region>
+<Country>USA</Country>
+<Maker>Joseph Phelps</Maker>
+<Year>2012</Year>
+<NumberOfRatings>21</NumberOfRatings>
+<Ratings>4.047619</Ratings>
+<WineType>WHITE</WineType>
+<WineVariety>SWEET</WineVariety>
+</wine>
+<wine id="110">
+<LabelName>Joseph Phelps Cabernet Sauvignon 2012</LabelName>
+<Grape>Cabernet Sauvignon</Grape>
+<Region>Napa</Region>
+<Country>USA</Country>
+<Maker>Joseph Phelps</Maker>
+<Year>2012</Year>
+<NumberOfRatings>21</NumberOfRatings>
+<Ratings>4.047619</Ratings>
+<WineType>WHITE</WineType>
+<WineVariety>SWEET</WineVariety>
+</wine>
+<wine id="110">
+<LabelName>Joseph Phelps Cabernet Sauvignon 2012</LabelName>
+<Grape>Cabernet Sauvignon</Grape>
+<Region>Napa</Region>
+<Country>USA</Country>
+<Maker>Joseph Phelps</Maker>
+<Year>2012</Year>
+<NumberOfRatings>21</NumberOfRatings>
+<Ratings>4.047619</Ratings>
+<WineType>WHITE</WineType>
+<WineVariety>SWEET</WineVariety>
+</wine>
+<wine id="110">
+<LabelName>Joseph Phelps Cabernet Sauvignon 2012</LabelName>
+<Grape>Cabernet Sauvignon</Grape>
+<Region>Napa</Region>
+<Country>USA</Country>
+<Maker>Joseph Phelps</Maker>
+<Year>2012</Year>
+<NumberOfRatings>21</NumberOfRatings>
+<Ratings>4.047619</Ratings>
+<WineType>WHITE</WineType>
+<WineVariety>SWEET</WineVariety>
+</wine>
+</wines>

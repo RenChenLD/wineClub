@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<shipments xmlns="file:/Users/renchen/Documents/workspace/wineClub/shipments.xml">
+<shipment id="9">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>RW</type>
+<wines>
+<wine id="3">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="4">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="5">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="6">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="7">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="8">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>anytown</city>
+<state>anyState</state>
+<zip>60062</zip>
+</address>
+</shipment>
+<shipment id="221">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>AR</type>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>RW</type>
+<wines>
+<wine id="245">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="246">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="247">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="248">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="249">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="250">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="221">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>AR</type>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>RW</type>
+<wines>
+<wine id="245">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="246">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="247">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="248">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="249">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="250">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="221">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>AR</type>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>RW</type>
+<wines>
+<wine id="245">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="246">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="247">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="248">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="249">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="250">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="221">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>AR</type>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>RW</type>
+<wines>
+<wine id="245">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="246">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="247">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="248">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="249">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="250">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="221">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>AR</type>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+<shipment id="251">
+<selection_month>2015-05</selection_month>
+<status>Not shiped</status>
+<date>2015-05</date>
+<type>RW</type>
+<wines>
+<wine id="245">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="246">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="247">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="248">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="249">
+<label_name>Lambrusco2</label_name>
+</wine>
+<wine id="250">
+<label_name>Lambrusco2</label_name>
+</wine>
+</wines>
+<address>
+<street>123 Main ST, Apt 2F</street>
+<city>Anytown</city>
+<state>Anystate</state>
+<zip>12345</zip>
+</address>
+</shipment>
+</shipments>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="Wine" x="725" y="273">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="WineType" endpointName="wt" kind="Simple"/>
+        <Association destinationClassName="Note" endpointName="n" kind="Simple"/>
+        <Association destinationClassName="WineVariety"
+            endpointName="wv" kind="Simple"/>
+        <Communication destinationClassName="Note"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="Sub" x="1162" y="44">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="Wine"/>
+        <Communication destinationClassName="Subscriber"/>
+        <Communication destinationClassName="Note"/>
+        <Communication destinationClassName="Shipment"/>
+    </Class>
+    <Class name="Receipt" x="1067" y="241">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="Subscriber"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="WineType" x="904" y="322">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Address" x="234" y="209">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="RW" x="727" y="-6">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="Wine"/>
+        <Communication destinationClassName="MonthlySelection"/>
+    </Class>
+    <Class name="MonthlySelection" x="567" y="65">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Wine" endpointName="ws" kind="Simple"/>
+        <Association destinationClassName="MonthlySelectionType"
+            endpointName="mst" kind="Simple"/>
+        <Communication destinationClassName="MonthlySelectionType"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="MonthlySelectionType" x="718" y="65">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Shipment" x="96" y="-7">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Address" endpointName="add" kind="Simple"/>
+        <Association destinationClassName="Note" endpointName="notes" kind="Simple"/>
+        <Association destinationClassName="MonthlySelection"
+            endpointName="ms" kind="Simple"/>
+        <Association destinationClassName="Wine" endpointName="ws" kind="Simple"/>
+        <Communication destinationClassName="Note"/>
+        <Communication destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="Adm" x="978" y="432">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="Admin"/>
+    </Class>
+    <Class name="IdGenerator" x="1072" y="331">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Admin" x="717" y="150">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="MonthlySelection"
+            endpointName="ms" kind="Simple"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="DP" x="1110" y="67">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="AR" x="537" y="-6">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="MonthlySelection"/>
+    </Class>
+    <Class name="GeneralTest" x="21" y="176">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="SubInfo" endpointName="a" kind="Simple"/>
+        <Association destinationClassName="Subscriber" endpointName="s" kind="Simple"/>
+        <Association destinationClassName="Shipment" endpointName="sh" kind="Simple"/>
+        <Association destinationClassName="Subscriber" endpointName="s0" kind="Simple"/>
+        <Association destinationClassName="Subscriber" endpointName="s1" kind="Simple"/>
+        <Association destinationClassName="Subscriber" endpointName="s2" kind="Simple"/>
+        <Communication destinationClassName="Wine"/>
+        <Communication destinationClassName="AR"/>
+        <Communication destinationClassName="Receipt"/>
+        <Communication destinationClassName="RW"/>
+        <Communication destinationClassName="Subscriber"/>
+        <Communication destinationClassName="AW"/>
+        <Communication destinationClassName="Note"/>
+        <Communication destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="Shipment"/>
+        <Communication destinationClassName="SubInfo"/>
+        <Communication destinationClassName="Admin"/>
+    </Class>
+    <Class name="WineVariety" x="900" y="393">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="wines" x="1103" y="191">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="Subscriber" x="454" y="314">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="Address" endpointName="add" kind="Simple"/>
+        <Association destinationClassName="SubInfo" endpointName="ac" kind="Simple"/>
+        <Association destinationClassName="Note" endpointName="ns" kind="Simple"/>
+        <Association destinationClassName="MonthlySelection"
+            endpointName="ms" kind="Simple"/>
+        <Association destinationClassName="Wine" endpointName="ws" kind="Simple"/>
+        <Association destinationClassName="Shipment" endpointName="sht" kind="Simple"/>
+        <Association destinationClassName="Shipment" endpointName="shs" kind="Simple"/>
+        <Communication destinationClassName="Shipment"/>
+        <Communication destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="SubInfo"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="AW" x="631" y="-7">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="MonthlySelection"/>
+        <Communication destinationClassName="MonthlySelection"/>
+    </Class>
+    <Class name="Note" x="385" y="-5">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="IdGenerator"/>
+    </Class>
+    <Class name="receiptREST" x="1070" y="133">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="Receipt"/>
+    </Class>
+    <Class name="SubInfo" x="271" y="373">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
